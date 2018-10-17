@@ -24,11 +24,13 @@
     "lint": "standard --verbose | snazzy",
     "lintdiff": "git diff --name-only --cached --relative | grep '\\.js$' | xargs standard | snazzy",
     "fixcode": "standard --fix",
-    "git-hook": "npm run lint -s && npm run test -s"
+    "git-hook": "npm run lint -s && npm run test -s",
+    "postinstall": "rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json"
   },
   "dependencies": {
     "apisauce": "^0.14.3",
     "expo": "^25.0.0",
+    "firebase": "^4.10.1",
     "format-json": "^1.0.3",
     "identity-obj-proxy": "^3.0.0",
     "lodash": "^4.17.4",
@@ -39,6 +41,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
     "react-native-animatable": "^1.2.4",
     "react-native-i18n": "1.0.0",
+    "react-native-vector-icons": "^4.5.0",
     "react-navigation": "1.0.0-beta.11",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
